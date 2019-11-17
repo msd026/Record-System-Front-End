@@ -1,0 +1,12 @@
+ <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <select formControlName="list">
+          <option disabled>Select school</option>
+          <option>Choose school</option>
+          <option [ngValue]="li" *ngFor="let li of list">{{li.schoolName}}</option>
+        </select>
+        <!-- <div class="error-block" *ngIf="submitted && handleError('name', 'required')">
+                You must provide a value!
+        </div> -->
+        <button>Submit</button>
+      </form>
